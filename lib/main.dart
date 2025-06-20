@@ -29,7 +29,7 @@ Future<void> main() async {
     for (var fieldChange in event.docChanges) {
       if (fieldChange.type == DocumentChangeType.modified) {
         var now = DateTime.now();
-        debugPrint('CHANGE: ${fieldChange.type} ${fieldChange.doc.id} ${fieldChange.doc['field1']} TimeSinceLastChange: ${now.difference(lastFieldChange).inMilliseconds} ms');
+        debugPrint('CHANGE: ${fieldChange.doc.id} ${fieldChange.doc['field1']} TimeSinceLastChange: ${now.difference(lastFieldChange).inMilliseconds} ms');
         lastFieldChange = now;
       }
     }
